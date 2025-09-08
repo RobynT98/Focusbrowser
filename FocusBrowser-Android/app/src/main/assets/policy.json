@@ -1,0 +1,14 @@
+{
+  "start_url": "https://office.com",
+  "allowlist": [
+    "office.com",
+    "microsoft.com",
+    "live.com",
+    "login.microsoftonline.com",
+    "teams.microsoft.com",
+    "yh-akademin.se",
+    "edu.google.com",
+    "google.com",
+    "github.com"
+  ]
+}
