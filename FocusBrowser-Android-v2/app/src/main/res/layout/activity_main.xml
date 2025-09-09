@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:title="FocusBrowser"
+        app:menu="@menu/menu_main"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <EditText
+            android:id="@+id/address"
+            android:hint="Sök eller skriv adress  (tips: g sök | m outlook/gmail | gh github)"
+            android:imeOptions="actionGo"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:padding="8dp"/>
+
+        <FrameLayout
+            android:id="@+id/tab_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton android:id="@+id/btnBack" android:contentDescription="Back"
+                android:layout_width="48dp" android:layout_height="48dp"
+                android:src="@android:drawable/ic_media_previous" />
+            <ImageButton android:id="@+id/btnForward" android:contentDescription="Forward"
+                android:layout_width="48dp" android:layout_height="48dp"
+                android:src="@android:drawable/ic_media_next" />
+            <ImageButton android:id="@+id/btnNew" android:contentDescription="New Tab"
+                android:layout_width="48dp" android:layout_height="48dp"
+                android:src="@android:drawable/ic_input_add" />
+            <ImageButton android:id="@+id/btnTabs" android:contentDescription="Tabs"
+                android:layout_width="48dp" android:layout_height="48dp"
+                android:src="@android:drawable/ic_menu_sort_by_size" />
+            <ImageButton android:id="@+id/btnAi" android:contentDescription="AI"
+                android:layout_width="48dp" android:layout_height="48dp"
+                android:src="@android:drawable/ic_menu_search" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- AI bottom sheet -->
+    <include
+        layout="@layout/layout_ai_sheet"
+        android:id="@+id/ai_sheet"
+        app:layout_anchorGravity="bottom"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
